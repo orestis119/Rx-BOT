@@ -16,7 +16,7 @@ if os.path.exists(os.getcwd() + "/config.json"):
         configData = json.load(f)
 
 else:
-    configTemplate = {"Token": "" , "Prefix": "$"}
+    configTemplate = {"Token": "" , "Prefix": "!"}
 
     with open(os.getcwd() + "/config.json", "w+") as f:
         json.dump(configTemplate, f)
@@ -53,15 +53,13 @@ async def rxvideo(ctx):
     await ctx.send("I found a good video")
     await ctx.send(choice(videos))
 
-@bot.command(pass_context=True)
-async def join(ctx):
-    channel = ctx.author.voice.channel
-    await channel.connect()
 
-@bot.command(pass_context=True)
-async def dc(ctx):
-    server = ctx.message.guild.voice_client
-    await server.disconnect()
+@bot.command()
+async def id(ctx):
+    await ctx.send("Here is the Rrrrrrrxxx id on PUBG MOBILE \n562521606")
+
+
+
 
 
 bot.run(token)
