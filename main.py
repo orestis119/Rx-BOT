@@ -58,6 +58,12 @@ async def rxvideo(ctx):
 async def id(ctx):
     await ctx.send("Here is the Rrrrrrrxxx id on PUBG MOBILE \n562521606")
 
+@bot.command()
+async def pc(ctx):
+    embed = discord.Embed(colour=0xFF0000,  description="CPU \nAMD Ryzen 9 3900X \n\nCooler\nWraith PRISM\n\nMotherboard\nMSI B450-A Pro Max\n\nMemory\nCorsair Vengeance LPX 32GB DDR4-3200MHz\n\nGPU\nMSI GeForce GTX 1080 Gaming X 8G\n\nCase\nNZXT H510i White\n\nStorage\nAdata XPG SX8200 Pro 512GB\n\nPSU\nCorsair TX-M Series TX650M 650W")
+    embed.set_author(name="THE RX PC", icon_url="https://cdn.discordapp.com/avatars/344554922190045187/3b31373274342812417dbf5a0719f32f.webp?size=1024")
+    embed.set_footer(text="© 2020-2021 RX BOT, all rights reserved.")
+    await ctx.send(embed = embed)
 
 
 
