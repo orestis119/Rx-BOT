@@ -65,7 +65,13 @@ async def pc(ctx):
     embed.set_footer(text="© 2020-2021 RX BOT, all rights reserved.")
     await ctx.send(embed = embed)
 
-
+@bot.event
+async def on_command_error(ctx, error):
+    if isinstance(error, commands.CommandNotFound):
+        embed = discord.Embed(description= "This command does not Found \nenter your command correctly \nand see this channel <#781525304266850354> for more information\n\nThanks,", colour =0xFF0000)
+        embed.set_footer(text="© 2020-2021 RX BOT, all rights reserved.")
+        await ctx.send(embed=embed)
+        return
 
 
 bot.run(token)
